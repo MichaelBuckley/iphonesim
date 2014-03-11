@@ -33,6 +33,8 @@
 #import <Foundation/Foundation.h>
 #import <iPhoneSimulatorRemoteClient/iPhoneSimulatorRemoteClient.h>
 
+@class DVTPlatform;
+
 @interface iPhoneSimulator : NSObject <DTiPhoneSimulatorSessionDelegate> {
 @private
    DTiPhoneSimulatorSystemRoot *sdkRoot;

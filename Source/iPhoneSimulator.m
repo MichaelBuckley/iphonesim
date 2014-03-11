@@ -33,6 +33,12 @@
 #import "iPhoneSimulator.h"
 #import "nsprintf.h"
 
+@interface DVTPlatform
+
++ (BOOL)loadAllPlatformsReturningError: (NSError*) error;
+
+@end
+
 /**
  * A simple iPhoneSimulatorRemoteClient framework.
  */
@@ -164,6 +170,8 @@
         exit(EXIT_FAILURE);
     }
 
+    [DVTPlatform loadAllPlatformsReturningError: NULL];
+    
     if (strcmp(argv[1], "showsdks") == 0) {
         exit([self showSDKs]);
     }
